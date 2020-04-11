@@ -119,13 +119,19 @@ header {
 	background-color: #C0392B;
 }
 
-#portrait img {
+#medaillon {
+	display: flex; /* centre */
+	border: rgb(0,0,0,0.33) solid 4px;
+    border-radius: 100%;
 	width: 80%;
-	box-sizing: border-box;
-	clip-path: circle(50% at center); /* masque d'ecrêtage */
-	display: flex;
-	margin : auto;
-	border-width: : 20px;
+	height: 80%;
+	margin: auto;
+}
+
+#portrait img {
+	width: 100%; /* prend 100% de medaillon */
+	clip-path: circle(50% at center); /* masque d'ecrêtage. empêche l'emploi facile d'un border */
+	margin: auto;
 }
 
 /* --------------------- MAIN */
@@ -348,4 +354,5 @@ défi : faire un CV entièrement scalable, presque pas besoin de mediaqueries, j
 ce que j'ai appris : il existe plein de amnière d'aboutir au même résultat ; il faut soit trouver la plus élégante, ou la moins "couteuse"
 deux options possibles : soit combiner des class directement dans le html, soit prendre la règle la plus général et la spécifier pour certaines parties : css précis ou hmtl précis;
 à utiliser le DevTool pour regarder les marges et les propriétés qui s'appliquent.
+avec un flex-box : toujours spécifié un width et un height, c'est souvent de là que viennent les pb...;
 */
