@@ -5,7 +5,6 @@
 	margin:auto;
 	background-color: red;
 	border-color: black;
-	flex-wrap: wrap;
 	border: grey solid 0.05rem;
 	border-radius: 5px;
 	box-shadow: 5px 5px 10px grey;
@@ -89,6 +88,8 @@ header {
 	flex-direction: row-reverse; /* le "entete" est avant le "portrait", d'où la nécéssité de les inverser */
 	width: 100%;
 	background-color: green;
+	flex-wrap: wrap; /* wrap-responsive */
+	min-width: 400px; /* wrap-responsive */
 }
 
 #entete {
@@ -117,6 +118,7 @@ header {
 	flex: 1;
 	padding: 3% 1.5%;
 	background-color: #C0392B;
+	min-width: 200px; /* wrap-responsive */
 	/* pourquoi justify-content et align-items "center" ne marchent pas, je ne sais pas ! de fait, utiliser margin auto */
 }
 
@@ -138,12 +140,15 @@ main {
 	display: flex;
 	text-align: justify;
 	flex-direction: row-reverse; /* l'aside est placé après le section dans le html, d'où la nécéssité de les inverser */
+	flex-wrap: wrap-reverse; /* wrap-responsive */
+	min-width: 400px; /* wrap-responsive */
 }
 
 	/* ------------------------------------------  SECTION */
 section {
 	flex: 2;
 	background-color: #F2D7D5;
+
 }
 
 section h1 {
@@ -256,6 +261,7 @@ aside {
 	flex-direction: column;
 	background-color: #C0392B;
 	color: #F2D7D5;
+	min-width: 200px; /* wrap-responsive */
 }
 
 aside a { /* enlever soulignement et couleur des liens tout en restant cliquable */
