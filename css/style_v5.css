@@ -1,7 +1,7 @@
 /* --------------------- AUTRES */
 #conteneur {
 	font-family: HelveticaNeue, RobotoLight;
-	width:50%;
+	width: 888px; /* à 50%, sur écran Ugo cela donne 888px ; proportion proche de la feuille A4 donnée en exemple */
 	margin:auto;
 	background-color: red;
 	border-color: black;
@@ -92,13 +92,16 @@ header {
 	min-width: 400px; /* wrap-responsive */
 }
 
-#entete {
-	display: flex;
+#enveloppe-entete {
 	flex: 2;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 3% 3%;
 	background-color: #F2D7D5;
+}
+
+#entete {
+	padding: 0 6%;
 }
 
 #nom {
@@ -114,16 +117,22 @@ header {
 	width: 4rem;
 }
 
-#portrait  {
+#enveloppe-portrait {
 	flex: 1;
-	padding: 3% 1.5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	background-color: #C0392B;
+}
+
+#portrait  {
+	padding: 12% 0;
 	min-width: 200px; /* wrap-responsive */
 	/* pourquoi justify-content et align-items "center" ne marchent pas, je ne sais pas ! de fait, utiliser margin auto */
 }
 
 #medaillon {
-	display: flex; /* tient la hauteur */
+	display: flex; /* retient le border autour de l'image */
 	border: rgb(0,0,0,0.33) solid 4px; /* transparence dans le rgb, plutôt qu'un opactity qui a de l'hérédité */
     border-radius: 50%; /* proportion pour un cercle parfait */
 	width: 80%; /* prends 80% de portrait */
@@ -354,7 +363,7 @@ comment faire des puces ? et des puces avec un cercles autour ? et des puces ave
 tentative 1 : utilisation d'un border shadow avec un border de la couleur du fond. marche, mais peu élégant : border: solid #F2D7D5 0.1rem;   box-shadow: 0 0 0 0.05rem #C0392B;
 solution : border double : marche, en moins de caractère! 
 
-défi : faire un CV entièrement scalable, presque pas besoin de mediaqueries, juste des breakpoints en min-widht et flex-wrap etc.;
+défi : faire un CV entièrement responsive, presque pas besoin de mediaqueries, juste des breakpoints en min-widht et flex-wrap etc.;
 
 ce que j'ai appris : il existe plein de amnière d'aboutir au même résultat ; il faut soit trouver la plus élégante, ou la moins "couteuse"
 deux options possibles : soit combiner des class directement dans le html, soit prendre la règle la plus général et la spécifier pour certaines parties : css précis ou hmtl précis;
