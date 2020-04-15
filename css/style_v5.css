@@ -1,7 +1,7 @@
 /* --------------------- AUTRES */
 #conteneur {
 	font-family: HelveticaNeue, RobotoLight;
-	width: 888px; /* à 50%, sur écran Ugo cela donne 888px ; proportion proche de la feuille A4 donnée en exemple */
+	width: 900px; /* à 50%, sur écran Ugo cela donne 888px ; arrondie à 900px, proportion proche de la feuille A4 donnée en exemple */
 	margin:auto;
 	background-color: red;
 	border-color: black;
@@ -88,8 +88,6 @@ header {
 	flex-direction: row-reverse; /* le "entete" est avant le "portrait", d'où la nécéssité de les inverser */
 	width: 100%;
 	background-color: green;
-	flex-wrap: wrap; /* wrap-responsive */
-	min-width: 400px; /* wrap-responsive */
 }
 
 #enveloppe-entete {
@@ -127,7 +125,6 @@ header {
 
 #portrait  {
 	padding: 12% 0;
-	min-width: 200px; /* wrap-responsive */
 	/* pourquoi justify-content et align-items "center" ne marchent pas, je ne sais pas ! de fait, utiliser margin auto */
 }
 
@@ -149,8 +146,6 @@ main {
 	display: flex;
 	text-align: justify;
 	flex-direction: row-reverse; /* l'aside est placé après le section dans le html, d'où la nécéssité de les inverser */
-	flex-wrap: wrap-reverse; /* wrap-responsive */
-	min-width: 400px; /* wrap-responsive */
 }
 
 	/* ------------------------------------------  SECTION */
@@ -186,15 +181,15 @@ section .sous-paragraphe {
 	flex-basis: 67%;
 }
 
-section .date-lieu {
-	margin-left: 0.75rem;
-}
-
 section .bloc-info {
 	display: flex;
 	flex-direction: row;
 	flex-basis: 34%;
 	margin-top: 0.05rem;
+}
+
+section .date-lieu {
+	margin-left: 0.75rem;
 }
 
 section .point-cercle {
@@ -207,6 +202,7 @@ section .point {
 
 .icones-section {
 	width: 2rem;
+	min-width: 2rem;
 	color: #C0392B;
 	margin-right: 1rem;
 }
@@ -270,7 +266,6 @@ aside {
 	flex-direction: column;
 	background-color: #C0392B;
 	color: #F2D7D5;
-	min-width: 200px; /* wrap-responsive */
 }
 
 aside a { /* enlever soulignement et couleur des liens tout en restant cliquable */

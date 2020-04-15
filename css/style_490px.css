@@ -1,0 +1,71 @@
+@media all and (max-width: 490px) {
+
+/* intention : ne plus conserver qu'une seule colonne
+
+/* BODY / CONTENEUR : supprimer toute marge */
+
+body {
+	margin: 0;
+}
+
+#conteneur {
+	width: 100%;
+	border: none;
+	box-shadow: none;
+	margin: 0;
+}
+
+/* HEADER : nom en deux parties superposée, avec un retour à la ligne */
+
+.font-light {
+	display: block;
+}
+
+/* MAIN : une seule colone, avec l'aside au dessus du section */
+
+main {
+	display: flex;
+	flex-direction: column-reverse; /* l'aside est placé après le section dans le html, d'où la nécéssité de les inverser */
+}
+
+/* ASIDE : réduire la taille = reprendre l'esthéituqe section */
+
+aside article:first-child .paragraphe {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+aside h1 {
+	margin-top: 2.5rem;
+}
+
+aside article {
+	margin-bottom: -2.5rem;
+}
+
+aside article:first-child h1 {
+	margin-top: 0;
+}
+
+aside article:last-child {
+	margin-top: 1.5rem;
+	margin-bottom: -1.5rem;
+}
+
+.bas-page {
+	margin-bottom: 0;
+}
+
+/* SECTION : supprimer marge de fin d'article */
+
+section article:last-child {
+	margin-bottom: 0;
+}
+
+#recommandations .sous-paragraphe {
+	flex-basis: 45%;
+	margin-bottom: 0;
+}
+
+}

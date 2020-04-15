@@ -1,0 +1,11 @@
+@media all and (max-width: 900px) {
+
+/* intention : adapter la mise en page "A4" en largeur auto
+juste adapter le conteneur en responsive */
+
+#conteneur {
+	width: 100%;
+	margin: 0;
+}
+
+}

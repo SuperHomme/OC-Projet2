@@ -1,0 +1,57 @@
+@media all and (max-width: 600px) {
+
+/* intention : conserver la mise page "deux colonnes" mais en présentant différement le header et en adaptant quelques largeurs */
+
+/* HEADER : adapter le portrait et l'entête */
+
+header {
+	display: flex;
+	flex-direction: column-reverse; /* le "entete" est avant le "portrait" dans le html, d'où la nécéssité de les inverser */
+}
+
+#enveloppe-portrait {
+	background-color: #F2D7D5;
+}
+
+#portrait  {
+	padding: 2% 0;
+	width: 40%;
+	margin: auto;
+}
+
+#enveloppe-entete {
+	background-color: #F2D7D5;
+	padding-bottom: 2rem;
+}
+
+#entete {
+	margin: auto;
+}
+
+#nom {
+	font-size: 2.5rem;
+}
+
+#poste {
+	font-size: 1.25rem;
+}
+
+/* SECTION : adapter la présentation des paragraphes, avec le bloc-info en "ligne" */
+
+section .paragraphe {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 1rem 0;
+}
+
+section .date-lieu {
+	display: flex;
+	flex-direction: row;
+	margin-left: 0.75rem;
+}
+
+section .date-lieu p {
+	padding-right: 0.5rem;
+}
