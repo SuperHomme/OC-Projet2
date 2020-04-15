@@ -17,6 +17,11 @@ h1, h2, #nom {
 	text-align: left;
 }
 
+h1 {
+	margin-block-start: 0; /*suppression du margin automatiquement decidé par le navigateur */
+    margin-block-end: 0;
+}
+
 /* FONTS : https://www.smashingmagazine.com/2013/02/setting-weights-and-styles-at-font-face-declaration/ */
 
 @font-face { /* regular */
@@ -166,8 +171,17 @@ section h2 {
 section article{
 	display: flex;
 	flex-direction: column;
-	padding: 0 6%;
-	margin-bottom: -2.5rem;
+	margin: 1rem 6%;
+}
+
+section .titre-article {
+	display: flex;
+	border-bottom: #C0392B solid 0.1rem;
+}
+
+section .corps-article {
+	margin-top: 1rem
+	margin-bottom: 2rem;
 }
 
 section .paragraphe {
@@ -212,27 +226,26 @@ section h2, section h3, section p {
 	margin-bottom: 3%;
 }
 
-.titre-article {
-	display: flex;
-	margin-top: 2.5rem;
-	border-bottom: #C0392B solid 0.1rem;
+
+
+section article:first-child .titre-article {
+	margin-top: 1rem;
 }
 
 section h1 {
 	margin: 0;
 }
 
-#recommandations .sous-paragraphe {
+section article:last-child .sous-paragraphe {
 	flex-basis: 45%;
-	margin-bottom: 10%;
 }
 
-#recommandations h2 {
+section article:last-child h2 {
 	font-size: 0.8rem;
 	margin-bottom: 2%;
 }
 
-#recommandations h3 {
+section article:last-child h3 {
 	text-transform: capitalize;
 	font-size: 0.8rem;
 	margin-bottom: 1%;
@@ -274,7 +287,7 @@ aside a { /* enlever soulignement et couleur des liens tout en restant cliquable
 }
 
 aside .paragraphe {
-	padding: 0 10%;
+	margin: 1rem 12%; /* pour avoir une marge proportionnelle aux paragraphes de section, il faut doubler la marge de 6% (rapport 1 tiers, 2 tiers) */
 }
 
 aside .sous-paragraphe {
@@ -288,7 +301,7 @@ aside h1 {
 	color: #C0392B;
 	text-align: center;
 	font-weight: bold;
-	padding: 0.25rem; 
+	padding: 0.25rem;
 }
 
 aside h2 {
@@ -302,33 +315,31 @@ aside p {
 	margin: 0;
 }
 
-aside img {
-	width: 20%; /* margin: auto; n'est pas pris en compte */
-}
-
-.icones-loisirs {
-	width: 15%;
-}
-
-article.loisirs {  /*pour que la flexbox aille jusqu'en bas, auto sur l'article "loisirs" */
+aside article:last-child {  /* article "loisirs" ; pour que la flexbox aille jusqu'en bas, auto sur l'article "loisirs" */
 	flex: auto;
 	display: flex;
 	align-items: flex-end; /* et ses items commencent en bas */
 }
 
-article .bas-page {
-	display: flex;
+aside ul {
+	display: none;
+}
+
+.bas-page {
 	width: 100%;
-	flex-direction: column;
-	margin-bottom: 10%;
+	display: flex;
+	flex-direction: column; /* pour que le titre "loisir" soit au dessus des icônes */
 }
 
 .bas-page .paragraphe {
+	width: auto;
 	display: flex;
-	width: 100%;
-	padding: 0;
 	flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+.icones-loisirs {
+	width: 20%; /* 15% de paragraphe */
 }
 
 /* 

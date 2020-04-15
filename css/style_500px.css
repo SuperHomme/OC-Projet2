@@ -1,4 +1,4 @@
-@media all and (max-width: 490px) {
+@media all and (max-width: 500px) {
 
 /* intention : ne plus conserver qu'une seule colonne
 
@@ -30,41 +30,35 @@ main {
 
 /* ASIDE : réduire la taille = reprendre l'esthéituqe section */
 
+aside .paragraphe {
+	margin: 1rem 6%; /* pour avoir une marge proportionnelle aux paragraphes de section, il faut doubler la marge de 6% (rapport 1 tiers, 2 tiers) */
+}
+
 aside article:first-child .paragraphe {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin-bottom: -0.5rem; /* correction d'un bug d'interprétation induit par le wrap */
 }
 
-aside h1 {
-	margin-top: 2.5rem;
+aside ul {
+	display: block;
+	padding-inline-start: 1rem;
+	margin-block-start: 0;
+    margin-block-end: 0;
 }
 
-aside article {
-	margin-bottom: -2.5rem;
+aside article:last-child .paragraphe {
+	margin: 1rem 6%; /* à répéter après la déclaration sur l'ul, pour annuler ses propriétés */
 }
 
-aside article:first-child h1 {
-	margin-top: 0;
-}
-
-aside article:last-child {
-	margin-top: 1.5rem;
-	margin-bottom: -1.5rem;
-}
-
-.bas-page {
-	margin-bottom: 0;
+aside .icones-loisirs {
+	display: none;
 }
 
 /* SECTION : supprimer marge de fin d'article */
 
 section article:last-child {
-	margin-bottom: 0;
-}
-
-#recommandations .sous-paragraphe {
-	flex-basis: 45%;
 	margin-bottom: 0;
 }
 
