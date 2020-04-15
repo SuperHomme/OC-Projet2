@@ -1,4 +1,4 @@
-/* --------------------- AUTRES */
+/* --------------------- GENERAL */
 #conteneur {
 	font-family: HelveticaNeue, RobotoLight;
 	width: 900px; /* à 50%, sur écran Ugo cela donne 888px ; arrondie à 900px, proportion proche de la feuille A4 donnée en exemple */
@@ -20,6 +20,14 @@ h1, h2, #nom {
 h1 {
 	margin-block-start: 0; /*suppression du margin automatiquement decidé par le navigateur */
     margin-block-end: 0;
+}
+
+.icone-rouge {
+	filter: invert(22%) sepia(28%) saturate(5341%) hue-rotate(347deg) brightness(107%) contrast(84%); /* code pen qui permet re changer la couleur d'un svg https://codepen.io/sosuke/pen/Pjoqqp */
+}
+
+.icone-rosepale {
+	filter: invert(89%) sepia(3%) saturate(2544%) hue-rotate(314deg) brightness(105%) contrast(90%);
 }
 
 /* FONTS : https://www.smashingmagazine.com/2013/02/setting-weights-and-styles-at-font-face-declaration/ */
@@ -220,6 +228,8 @@ section .point {
 	color: #C0392B;
 	margin-right: 1rem;
 }
+
+
 
 section h2, section h3, section p {
 	margin: 0;
