@@ -29,7 +29,40 @@ main {
 }
 
 /* ASIDE : réduire la taille = reprendre l'esthéituqe section */
+	/* ------------ modifs pour la meme pres que section */
+aside {
+	background-color: #F2D7D5;
+	color: #424949;
+}
 
+aside .titre-article {
+	display: block;
+	display: flex;
+	border-bottom: #C0392B solid 0.1rem;
+}
+
+aside h1 {
+	background: none;
+	text-align: center;
+	font-weight: bold;
+	color: #424949;
+	font-size: 1.5rem;
+}
+
+aside a {
+	text-decoration: none;
+	color: #424949;
+}
+
+aside article{
+    margin: 1rem 6%;
+}
+
+aside article>h1, .bas-page>h1 {
+	display: none;
+}
+
+	/* ------------ autres modifs */
 aside .paragraphe {
 	margin: 1rem 6%; /* pour avoir une marge proportionnelle aux paragraphes de section, il faut doubler la marge de 6% (rapport 1 tiers, 2 tiers) */
 }

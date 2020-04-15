@@ -23,7 +23,7 @@ h1 {
 }
 
 .icone-rouge {
-	filter: invert(22%) sepia(28%) saturate(5341%) hue-rotate(347deg) brightness(107%) contrast(84%); /* code pen qui permet re changer la couleur d'un svg https://codepen.io/sosuke/pen/Pjoqqp */
+	filter: invert(25%) sepia(83%) saturate(1802%) hue-rotate(345deg) brightness(91%) contrast(85%); /* code pen qui permet re changer la couleur d'un svg https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
 .icone-rosepale {
@@ -229,14 +229,10 @@ section .point {
 	margin-right: 1rem;
 }
 
-
-
 section h2, section h3, section p {
 	margin: 0;
 	margin-bottom: 3%;
 }
-
-
 
 section article:first-child .titre-article {
 	margin-top: 1rem;
@@ -304,6 +300,9 @@ aside .sous-paragraphe {
 	margin-bottom: 6%;
 }
 
+aside .titre-article {
+	display:none;
+}
 
 aside h1 {
 	background-color: #A6ACAF;
