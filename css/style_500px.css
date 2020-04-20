@@ -64,7 +64,7 @@ aside article>h1, .bas-page>h1 {
 
 	/* ------------ autres modifs */
 aside .paragraphe {
-	margin: 1rem 6%; /* pour avoir une marge proportionnelle aux paragraphes de section, il faut doubler la marge de 6% (rapport 1 tiers, 2 tiers) */
+	margin: 1rem 0; 
 }
 
 aside article:first-child .paragraphe {
@@ -72,6 +72,15 @@ aside article:first-child .paragraphe {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin-bottom: -0.5rem; /* correction d'un bug d'interprétation induit par le wrap */
+}
+
+aside article:first-child .sous-paragraphe {
+	flex-basis:45%; /*laisse une petite marge entre les blocs */
+	text-align: left;
+}
+
+aside article:first-child h2{
+	font-weight: bold;
 }
 
 aside ul {
@@ -93,6 +102,10 @@ aside .icones-loisirs {
 
 section article:last-child {
 	margin-bottom: 0;
+}
+
+aside {
+	margin-bottom: -1rem;
 }
 
 }
