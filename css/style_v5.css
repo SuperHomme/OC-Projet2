@@ -348,40 +348,5 @@ aside ul {
 }
 
 .icones-loisirs {
-	width: 20%; /* 15% de paragraphe */
+	width: 20%; /* 20% de paragraphe */
 }
-
-/* 
-problème : les backgrounds
-comment faire pour que les backgrounds se retrouvent dans le header alors qu'ils ne devraient s'appliquer qu'aux aside et section ?
-solution : diviser le header en deux, en faisant attention aux marges etc pour être bien aligné sur la répartition 2tiers / 1tiers du main, puis appliquer les même backgrounds, au moyen de variable ?
-
-problème : les flex (grow, shrink et basis)
-je mettais un flex 1 et flex sur les deux parties côtes à côtes, avec un padding relatif (en%).
-hors, je ne comprenais pas pq, le bloc aside semblait avoir un pb de marge suppélementaire : il était légèrement plus grand que le tiers de l'espace.
-j'ai d'abords maudit le flex. puis j'ai tenté en poucentage avec un width : suprise, le résultat est le même !
-plus j'ai supprimer les padding, et c'est là que j'ai compris le problème : ils étaient en relatifs, et donc calculer par rapport à l'élément parent
-tentative 1 : calculer un padding relatif égale pour chaque partie. au moyen de variable ? dans le cas présent : padding décidé x (1/3) = padding variable x (2/3) | donc padding variabe = ((padding décidé x (1/3)) / 2/3 ) | avec 3% on a x = 3% x ((1/3)/2/3) = 1,5% (à écrire 1.5% avec un point);
-les poucentages montrent des limites, les padding de aside et section ne font pas la même taille / je ne comprend pas pq le padding augmente la taille du tiers de flex... tout aurait été plus simple ! ;
-tentative 2 : est avec box-izing : non-concluant, rien ne change, le width de la flexbox n'est pas pris en compte.
-tentative 3 : avec flex grow shrink et basis étonnant, mais inversé, et pas précis.
-solution : utilisation des proprité précises de flex recommandées ici : https://developer.mozilla.org/fr/docs/Web/CSS/flex#Syntaxe
-insertion du double padding l'aside ;
-
-problème : la police utilisée ne ressemble à aucune de Dafont ou Google Font
-tentative 1 : grâce à whatmyfont, j'ai trouvé qu'il s'agissait de Helvetica Neue ; malheureusement, elle est propriétaire et font squirrel refuse de générer une police black listée... donc je la double de Roboto Light.
-mais il faut specifier les police avec des font-weight qui ne marchent pas ! je ne sais plus vraiment quoi faire..;
-
-problème : le puces
-féfi : ne pas utiliser font awesome.
-comment faire des puces ? et des puces avec un cercles autour ? et des puces avec un couleur paramétrable ?
-tentative 1 : utilisation d'un border shadow avec un border de la couleur du fond. marche, mais peu élégant : border: solid #F2D7D5 0.1rem;   box-shadow: 0 0 0 0.05rem #C0392B;
-solution : border double : marche, en moins de caractère! 
-
-défi : faire un CV entièrement responsive, presque pas besoin de mediaqueries, juste des breakpoints en min-widht et flex-wrap etc.;
-
-ce que j'ai appris : il existe plein de amnière d'aboutir au même résultat ; il faut soit trouver la plus élégante, ou la moins "couteuse"
-deux options possibles : soit combiner des class directement dans le html, soit prendre la règle la plus général et la spécifier pour certaines parties : css précis ou hmtl précis;
-à utiliser le DevTool pour regarder les marges et les propriétés qui s'appliquent.
-avec un flex-box : toujours spécifié un width et un height, c'est souvent de là que viennent les pb...;
-*/
